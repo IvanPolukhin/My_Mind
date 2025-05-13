@@ -1,13 +1,16 @@
 const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
-const {withNativeWind} = require('nativewind/metro');
-const exclusionList = require('metro-config/src/defaults/exclusionList');
 
 const config = mergeConfig(getDefaultConfig(__dirname), {
   resolver: {
-    blockList: exclusionList([
-      /.*\/node_modules\/react-native\/.*/,
-    ]),
+    sourceExts: ['js', 'jsx', 'ts', 'tsx', 'json'],
+    assetExts: ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg'],
+    extraNodeModules: {
+      src: './src',
+      components: './src/components',
+      assets: './src/assets',
+      utils: './src/utils',
+    },
   },
 });
 
-module.exports = withNativeWind(config, {input: './global.css'});
+module.exports = config;

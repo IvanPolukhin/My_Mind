@@ -1,5 +1,5 @@
 {
-  "name": "MyMind",
+  "name": "my-mind",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
-    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-typescript": "^7.27.1",
     "@babel/runtime": "^7.25.0",
     "@react-native-community/cli": "18.0.0",
     "@react-native-community/cli-platform-android": "18.0.0",
